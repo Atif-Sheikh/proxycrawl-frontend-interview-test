@@ -1,3 +1,97 @@
 .index {
   // Styles for index page
+
+  main {
+    height: 100vh;
+    width: 100vw;
+
+    .container {
+      display: flex;
+      background-color: rgb(255, 249, 242);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+
+        .label {
+          margin: 5px 10px 5px 0;
+        }
+
+        .inputField {
+          width: 200px;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        .submitBtn {
+          padding: 10px 20px;
+          background-color: dodgerblue;
+          border: 1px solid #ddd;
+          color: white;
+        }
+
+      }
+
+      .loader {
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #3498db;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        animation: spin 0.5s linear infinite;
+        display: none;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    }
+
+    .product {
+      display: flex;
+      justify-content: center;
+      padding: 0 10rem;
+      height: auto;
+      transition: all 0.2s linear;
+      opacity: 0;
+      visibility: hidden;
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .prod-details {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: 2rem;
+
+        .title {
+          font-size: 17px;
+        }
+
+        .sub-title {
+          font-size: 17px;
+        }
+
+        .price {
+          font-size: 17px;
+        }
+        .desc {
+          font-size: 17px;
+        }
+      }
+    }
+  }
 }
